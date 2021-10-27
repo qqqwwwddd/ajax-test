@@ -27,10 +27,6 @@
 	padding: 10px;
 }
 
-.board-box {
-	padding: 10px;
-	item-align: center;
-}
 </style>
 </head>
 <body>
@@ -45,7 +41,7 @@
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="#" onClick="getId()">번호순(내림차순)</a> <a
 						class="dropdown-item" href="#" onClick="getTitle()">제목순(내림차순)</a>
-					<a class="dropdown-item" href="#" onClick="getcreatedAt()">날짜순(내림차순)</a>
+					<a class="dropdown-item" href="#" onClick="getCreatedAt()">날짜순(내림차순)</a>
 				</div>
 			</div>
 		</div>
@@ -99,8 +95,8 @@
 			}
 		}
 		
-		async function getcreatedAt(){
-			let response = await fetch("http://localhost:8080/board?order=createAt");
+		async function getCreatedAt(){
+			let response = await fetch("http://localhost:8080/board?order=createdAt");
 			let parseResponse = await response.json();
 			console.log(parseResponse);
 			

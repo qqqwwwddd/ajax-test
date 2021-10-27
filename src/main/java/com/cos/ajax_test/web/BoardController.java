@@ -35,7 +35,7 @@ public class BoardController {
 		}else if(order.equals("title")) {
 			boards =  boardRepository.mFindOrderTitle();
 		}else if(order.equals("createdAt")) {
-			boards = boardRepository.mFindOrdercreatedAt();
+			boards = boardRepository.mFindOrderCreatedAt();
 		}else {
 			boards =  boardRepository.findAll();
 		}
